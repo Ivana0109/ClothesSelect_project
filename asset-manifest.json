@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ClothesSelect_project/static/css/main.bb610e67.css",
+    "main.js": "/ClothesSelect_project/static/js/main.bff05f62.js",
+    "static/js/787.13a5a38d.chunk.js": "/ClothesSelect_project/static/js/787.13a5a38d.chunk.js",
+    "static/media/clothes.jpg": "/ClothesSelect_project/static/media/clothes.9f12c9b2fdb40e850e97.jpg",
+    "index.html": "/ClothesSelect_project/index.html",
+    "main.bb610e67.css.map": "/ClothesSelect_project/static/css/main.bb610e67.css.map",
+    "main.bff05f62.js.map": "/ClothesSelect_project/static/js/main.bff05f62.js.map",
+    "787.13a5a38d.chunk.js.map": "/ClothesSelect_project/static/js/787.13a5a38d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb610e67.css",
+    "static/js/main.bff05f62.js"
+  ]
+}
