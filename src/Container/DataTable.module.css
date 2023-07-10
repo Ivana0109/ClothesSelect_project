@@ -1,0 +1,11 @@
+.container {
+  padding: 10px;
+
+  gap: 10px;
+
+  background-color: rgba(252, 254, 255, 0.5);
+  border-radius: 10px;
+}
+.title {
+  padding-bottom: 8px;
+}
