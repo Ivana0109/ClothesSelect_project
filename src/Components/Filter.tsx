@@ -5,7 +5,7 @@ function Filter({ data, setValue, value }) {
   return (
     <div className={styles.container}>
       Filter
-      {data.map((item) => {
+      {data.map((item:string) => {
         return (
           <div key={item}>
             {" "}
