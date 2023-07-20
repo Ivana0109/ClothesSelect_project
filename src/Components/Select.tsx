@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Select.module.css";
+import { SelectTypes } from "./types";
 
-function SelectSize({ setValue, options, placeholder, value }) {
+function SelectSize({ setValue, options, placeholder, value }:SelectTypes) {
   return (
     <div>
       <select

@@ -4,11 +4,12 @@ import DataView from "./DataView";
 import axios from "axios";
 import styles from "./Display.module.css";
 
+
 function Display() {
   const [filter, setFilter] = useState("");
   const [savedData, setSavedData] = useState([]);
-  const [editId, setEditId] = useState(null);
-  const refresh = () => {
+  const [editId, setEditId] = useState<number |null>(null);
+  const refresh = () => { 
     axios
       .get(`http://localhost:3001/data${filter ? `?type=${filter}` : ""}`)
       .then((rez) => setSavedData(rez.data))

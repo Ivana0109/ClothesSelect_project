@@ -1,8 +1,14 @@
 import axios from "axios";
 import React from "react";
 import styles from "./TableRow.module.css";
-
-function TableRow({ item, refresh, setEditId }) {
+import { DataItem } from "./types";
+type Props = {
+  item: DataItem;
+  refresh: () => void;
+  setEditId: (value: number| null) => void;
+  key?: number;
+};
+function TableRow({ item, refresh, setEditId, key }: Props) {
   const onDelete = () => {
     axios
       .delete(`http://localhost:3001/data/${item.id}`)
@@ -41,7 +47,7 @@ function TableRow({ item, refresh, setEditId }) {
           </button>
           <button
             className={styles.buttonEdit}
-            onClick={() => setEditId(item.id)}
+            onClick={() => setEditId(item.id || null)}
           >
             Edit
           </button>

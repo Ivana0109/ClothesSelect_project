@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./SelectColor.module.css";
-function SelectColor({ setValue, value }) {
+import { InputTypes } from "./types";
+
+
+function SelectColor({ setValue, value }:InputTypes) {
   return (
     <div>
       <input

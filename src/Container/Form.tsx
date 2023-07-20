@@ -4,6 +4,16 @@ import SelectPhoto from "../Components/SelectPhoto";
 import Select from "../Components/Select";
 import axios from "axios";
 import styles from "./Form.module.css";
+import { DataItem } from "../Components/types";
+
+type Props = {
+
+  refresh: () => void;
+  editId:number|null ;
+  setEditId: (value: number |null) => void;
+
+};
+
 
 const INITIAL_DATA = {
   type: "",
@@ -12,13 +22,13 @@ const INITIAL_DATA = {
   photo: "",
 };
 
-function Form({ refresh, editId, setEditId }) {
-  const [data, setData] = useState(INITIAL_DATA);
+function Form({ refresh, editId, setEditId }:Props) {
+  const [data, setData] = useState<DataItem>(INITIAL_DATA);
   const resetData = () => {
     setData(INITIAL_DATA);
     setEditId(null);
   };
-  const sendData = (event) => {
+  const sendData = (event: React.FormEvent<HTMLFormElement>) => {
     const { type, size, photo } = data;
     event.preventDefault();
     if (!type || !size || !photo) {
@@ -43,7 +53,7 @@ function Form({ refresh, editId, setEditId }) {
     }
   }, [editId]);
   return (
-    <form onSubmit={sendData} className={styles.container}>
+    <form onSubmit={(e)=>sendData(e)} className={styles.container}>
       <div> {editId ? `ID: ${editId}` : "Novi unos"}</div>
       <SelectColor
         setValue={(value) => setData({ ...data, color: value })}

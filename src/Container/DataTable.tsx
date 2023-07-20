@@ -1,8 +1,15 @@
 import React from "react";
 import TableRow from "../Components/TableRow";
 import styles from "./DataTable.module.css";
+import { DataItem} from "../Components/types";
+type Props={
+  data:DataItem[],
+  refresh:()=>void,
+  setEditId:(value:number |null)=>void
+ 
+}
 
-function DataTable({ data = [], refresh, setEditId }) {
+function DataTable({ data, refresh, setEditId }:Props) {
   return (
     <div className={styles.container}>
       <div className={styles.title}>Popis</div>
@@ -18,7 +25,7 @@ function DataTable({ data = [], refresh, setEditId }) {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
+          {data.map((item:DataItem) => (
             <TableRow
               key={item.id}
               item={item}

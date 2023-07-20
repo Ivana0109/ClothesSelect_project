@@ -1,8 +1,16 @@
 import React from "react";
 import DataTable from "./DataTable";
 import Filter from "../Components/Filter";
+import { DataItem } from "../Components/types";
 
-function DataView({ data, refresh, setEditId, setFilter, filter }) {
+type Props = {
+  data: DataItem[];
+  refresh: () => void;
+  setEditId: (value: number |null) => void;
+  setFilter: (value: string) => void;
+  filter: string;
+};
+function DataView({ data, refresh, setEditId, setFilter, filter }:Props) {
   return (
     <div>
       <Filter

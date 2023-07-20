@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import styles from "./SelectPhoto.module.css";
-function SelectPhoto({ setValue, value }) {
+import { InputTypes } from "./types";
+
+function SelectPhoto({ setValue, value }:InputTypes) {
   const inputRef = useRef();
   const resizeBase64Img = (base64, newWidth, newHeight) => {
     return new Promise((resolve) => {
