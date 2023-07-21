@@ -17,11 +17,10 @@ function DataTable({ data, refresh, setEditId }:Props) {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Type</th>
-            <th>Size</th>
-            <th>Color</th>
-            <th>Photo</th>
-            <th>Actions</th>
+            <th>Tip</th>
+            <th>Veličina</th>
+            <th>Boja</th>
+            <th>Fotografija</th>
           </tr>
         </thead>
         <tbody>
